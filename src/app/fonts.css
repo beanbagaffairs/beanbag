@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Formular';
+  src: url('../../public/fonts/formular-black-trial.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: url('../../public/fonts/formular-bold-trial.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: url('../../public/fonts/formular-light-trial.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: url('../../public/fonts/formular-medium-trial.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: url('../../public/fonts/formular-mono-trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: monospace;
+}
+
+@font-face {
+  font-family: 'Formular';
+  src: url('../../public/fonts/formular-regular-trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM-Sans';
+  src: url('../../public/fonts/DM-Sans-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
