@@ -36,7 +36,7 @@ const OurStorySection = () => {
       >
         <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5]">
           <Image
-            src="/homepage/our_team.jpg"
+            src="https://res.cloudinary.com/djkd6cyxb/image/upload/v1760443353/InShot_20251006_012420942_v489b5.jpg"
             alt="Our Story"
             fill
             className="rounded-2xl shadow-xl shadow-black/30 object-cover"

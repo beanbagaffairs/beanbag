@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "./fonts.css";
 import ClientLayout from "./ClientLayout";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} overflow-x-hidden relative`}>
         <ClientLayout>{children}</ClientLayout>
+        <WhatsAppIcon />
       </body>
     </html>
   );

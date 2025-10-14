@@ -147,7 +147,8 @@ export const serviceData = {
       cta: "Find My Perfect Cast",
       ctaLink: "/contact-us",
       category: "adFilms",
-      videoSrc: "https://res.cloudinary.com/dvjqrh2gh/video/upload/v1758313906/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/Ad%20films%20amd%20commercials/bts_mukherjee_by2zmk.mp4",
+      videoSrc:
+        "https://res.cloudinary.com/dvjqrh2gh/video/upload/v1758313906/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/Ad%20films%20amd%20commercials/bts_mukherjee_by2zmk.mp4",
       images: [
         "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758313910/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/Ad%20films%20amd%20commercials/vlcsnap-2025-09-10-14h13m34s258_dbrtis.png",
         "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758313913/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/Ad%20films%20amd%20commercials/vlcsnap-2025-09-10-14h12m45s076_jmdmi9.png",
@@ -200,7 +201,8 @@ export const serviceData = {
       cta: "Start My Production Journey",
       ctaLink: "/contact-us",
       category: "adFilms",
-      videoSrc: "https://res.cloudinary.com/dvjqrh2gh/video/upload/v1758313908/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/Ad%20films%20amd%20commercials/BRAND_PROMOTION_THUMBNAIL_OPTION_2_m4wmyc.mp4",
+      videoSrc:
+        "https://res.cloudinary.com/dvjqrh2gh/video/upload/v1758313908/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/Ad%20films%20amd%20commercials/BRAND_PROMOTION_THUMBNAIL_OPTION_2_m4wmyc.mp4",
       // imageSrc: "https://res.cloudinaryproduction.com/dvjqrh2gh/image/upload/v1758311487/Bean%20Bag%20Agencies/main/Stock%20Shots%20by%20Chiranjit/InShot_20240306_101704925_dqpvn7.jpg",
     },
 
@@ -633,6 +635,8 @@ export const serviceData = {
         "Day-of Coordination",
         "Budgeting and Scheduling",
         "Family and Guest Assistance",
+        "Accommodation",
+        "Logistics and Guest Movement",
       ],
       whatWeDo: {
         service1: {
@@ -655,6 +659,14 @@ export const serviceData = {
         service5: {
           title: "Family and Guest Assistance",
           description: "Ensuring everyone feels supported and celebrated.",
+        },
+        service6: {
+          title: "Accommodation",
+          description: "Premium guest accommodations, Bridal suites and hospitality teams, Concierge services and welcome kits",
+        },
+        service7: {
+          title: "Logistics and Guest Movement",
+          description: "Luxury travel and guest transfers, Airport pickups and scheduling, On-ground staff and 24/7 coordination",
         },
       },
       whyChooseUs:

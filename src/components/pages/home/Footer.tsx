@@ -125,15 +125,7 @@ export function Footer() {
             <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
           </div>
           <div className="relative overflow-hidden group/line cursor-pointer">
-            <h1 className="leading-none pb-2 font-formular text-sm sm:text-base">github</h1>
-            <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
-          </div>
-          <div className="relative overflow-hidden group/line cursor-pointer">
-            <h1 className="leading-none pb-2 font-formular text-sm sm:text-base">behance</h1>
-            <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
-          </div>
-          <div className="relative overflow-hidden group/line cursor-pointer">
-            <h1 className="leading-none pb-2 font-formular text-sm sm:text-base">dribble</h1>
+            <h1 className="leading-none pb-2 font-formular text-sm sm:text-base">instagram</h1>
             <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
           </div>
           <div className="relative overflow-hidden group/line cursor-pointer">

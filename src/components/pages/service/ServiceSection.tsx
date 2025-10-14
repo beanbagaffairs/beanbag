@@ -76,26 +76,26 @@ const weddingServices = [
       "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758313866/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/weddings%20and%20events/Venue%20Selection%20and%20setup/Thumbnail_ywfm5b.jpg",
     category: "weddings",
   },
-  {
-    id: 9,
-    title: "Accommodation and Hospitality",
-    description:
-      "Premium guest accommodations, Bridal suites and hospitality teams, Concierge services and welcome kits",
-    href: "/service/accommodation-hospitality",
-    imageSrc:
-      "https://images.unsplash.com/photo-1516788875874-611481863552?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    category: "weddings",
-  },
-  {
-    id: 10,
-    title: "Logistics and Guest Movement",
-    description:
-      "Luxury travel and guest transfers, Airport pickups and scheduling, On-ground staff and 24/7 coordination",
-    href: "/service/logistics-guest-movement",
-    imageSrc:
-      "https://media.istockphoto.com/id/1499392931/photo/man-giving-car-key-to-male-valet.jpg?s=2048x2048&w=is&k=20&c=ctOhLQA6eNYBwVWXIE1pQe0Se40lQHXzsoLrIB_KARM=",
-    category: "weddings",
-  },
+  // {
+  //   id: 9,
+  //   title: "Accommodation and Hospitality",
+  //   description:
+  //     "Premium guest accommodations, Bridal suites and hospitality teams, Concierge services and welcome kits",
+  //   href: "/service/accommodation-hospitality",
+  //   imageSrc:
+  //     "https://images.unsplash.com/photo-1516788875874-611481863552?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   category: "weddings",
+  // },
+  // {
+  //   id: 10,
+  //   title: "Logistics and Guest Movement",
+  //   description:
+  //     "Luxury travel and guest transfers, Airport pickups and scheduling, On-ground staff and 24/7 coordination",
+  //   href: "/service/logistics-guest-movement",
+  //   imageSrc:
+  //     "https://media.istockphoto.com/id/1499392931/photo/man-giving-car-key-to-male-valet.jpg?s=2048x2048&w=is&k=20&c=ctOhLQA6eNYBwVWXIE1pQe0Se40lQHXzsoLrIB_KARM=",
+  //   category: "weddings",
+  // },
   {
     id: 11,
     title: "Custom VIP Services",
