@@ -195,6 +195,10 @@ export const serviceData = {
           title: "Costume and Styling Support",
           description: "Ensuring every frame looks effortlessly on-brand.",
         },
+        service6: {
+          title: "Subtitles and Transcripts",
+          description: "Adding depth and accessibility to your content.",
+        },
       },
       whyChooseUs:
         "Because production isn’t just about cameras rolling - it’s about orchestrating dozens of moving parts into a single, seamless vision. With Bean Bag Affairs, the process feels less like hard work and more like pure artistry.",
@@ -657,7 +661,7 @@ export const serviceData = {
           description: "Keeping timelines and finances on track.",
         },
         service5: {
-          title: "Family and Guest Assistance",
+          title: "Family, Guest and Kids Management",
           description: "Ensuring everyone feels supported and celebrated.",
         },
         service6: {
@@ -667,6 +671,10 @@ export const serviceData = {
         service7: {
           title: "Logistics and Guest Movement",
           description: "Luxury travel and guest transfers, Airport pickups and scheduling, On-ground staff and 24/7 coordination",
+        },
+        service8: {
+          title: "No Drunk Drivers Allowed",
+          description: "Because celebrations should end with smiles, not risks — we ensure no guest drives under the influence.",
         },
       },
       whyChooseUs:

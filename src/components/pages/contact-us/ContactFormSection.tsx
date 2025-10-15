@@ -11,17 +11,60 @@ const ContactFormSection = () => {
     phone: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    // Clear any previous error when user starts typing
+    if (submitStatus === 'error') {
+      setSubmitStatus('idle');
+      setErrorMessage('');
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent! We'll get back to you soon.");
-    setForm({ name: "", email: "", phone: "", message: "" });
+
+    // Basic validation
+    if (!form.name || !form.email || !form.message) {
+      setSubmitStatus('error');
+      setErrorMessage('Please fill in all required fields.');
+      return;
+    }
+
+    setIsLoading(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...form,
+          formType: 'contact' // Assuming this is needed by the API
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setForm({ name: "", email: "", phone: "", message: "" }); // Clear form on success
+      } else {
+        const errorData = await response.json();
+        setSubmitStatus('error');
+        setErrorMessage(errorData.error || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage('Network error. Please check your connection and try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -100,7 +143,7 @@ const ContactFormSection = () => {
 
               {/* WhatsApp Button */}
               <motion.a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919674920655"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -152,6 +195,19 @@ const ContactFormSection = () => {
 
         {/* Contact Form Section */}
         <div className="w-full lg:w-1/2 xl:w-2/5">
+          {/* Status Messages */}
+          {submitStatus === 'success' && (
+            <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+              Message sent successfully! We<span className="font-sans">&apos;</span>ll get back to you soon.
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+              {errorMessage}
+            </div>
+          )}
+
           <motion.form
             onSubmit={handleSubmit}
             className="space-y-4 sm:space-y-6 flex flex-col bg-white p-4 sm:p-6 rounded-[20px] sm:rounded-[30px] overflow-hidden border border-gray-200 shadow-lg"
@@ -179,7 +235,7 @@ const ContactFormSection = () => {
                 value={form.name}
                 placeholder="Enter your name"
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 border font-sans border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base"
               />
             </motion.div>
 
@@ -196,7 +252,7 @@ const ContactFormSection = () => {
                 value={form.email}
                 placeholder="Enter your email"
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 border font-sans border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base"
               />
             </motion.div>
 
@@ -213,7 +269,7 @@ const ContactFormSection = () => {
                 value={form.phone}
                 placeholder="Enter your phone number"
                 onChange={handleChange}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 border font-sans border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base"
               />
             </motion.div>
 
@@ -230,7 +286,7 @@ const ContactFormSection = () => {
                 placeholder="How can we help?"
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base resize-none"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 border font-sans border-gray-300 rounded-2xl sm:rounded-3xl focus:outline-none focus:ring-2 focus:ring-black/80 text-sm sm:text-base resize-none"
               />
             </motion.div>
 
@@ -239,9 +295,10 @@ const ContactFormSection = () => {
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 300 }}
               type="submit"
-              className="bg-[#1C2042] text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-2xl sm:rounded-3xl hover:bg-[#1C2042]/90 transition"
+              disabled={isLoading}
+              className="bg-[#1C2042] text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-2xl sm:rounded-3xl hover:bg-[#1C2042]/90 transition disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isLoading ? 'Sending...' : 'Send Message'}
             </motion.button>
 
             <motion.div

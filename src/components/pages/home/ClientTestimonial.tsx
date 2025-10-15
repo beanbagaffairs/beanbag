@@ -14,7 +14,7 @@ const testimonials = [
       "The pictures captured the emotions so beautifully. Every shot felt like a scene from a dream. Thank you for making my big day timeless.",
     rating: 5,
     image:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=150&h=150&fit=crop&crop=face",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760529674/istockphoto-1333001232-612x612_ocgfql.jpg",
   },
   {
     name: "Aman Verma",
@@ -24,7 +24,7 @@ const testimonials = [
       "Their team understood our advertising vision perfectly. Every frame was sharp, bold, and full of impact. A delight to work with!",
     rating: 5,
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760529673/istockphoto-1135381120-612x612_qx8wzv.jpg",
   },
   {
     name: "Priya Mehta",
@@ -34,37 +34,7 @@ const testimonials = [
       "Elegant visuals, professional team, and seamless execution. Their photography elevated our brand campaign in ways we didn't imagine.",
     rating: 5,
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-  },
-  {
-    name: "Rajesh Kumar",
-    role: "Event Organizer",
-    location: "Chennai",
-    comment:
-      "From corporate events to intimate gatherings, they bring a level of sophistication that's unmatched. Highly recommended!",
-    rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-  },
-  {
-    name: "Sneha Patel",
-    role: "Entrepreneur",
-    location: "Pune",
-    comment:
-      "Working with them was like having a creative partner who truly understood our brand story. The results exceeded all expectations.",
-    rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-  },
-  {
-    name: "Vikram Singh",
-    role: "Film Producer",
-    location: "Hyderabad",
-    comment:
-      "Their cinematic approach to event photography is phenomenal. They don't just capture moments, they create visual poetry.",
-    rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760529656/istockphoto-912910188-2048x2048_l9ny0y.jpg",
   },
 ];
 
@@ -151,8 +121,11 @@ const ClientTestimonials = () => {
                   <h4 className="text-[#1C2042] font-semibold text-sm lg:text-base">
                     {testimonial.name}
                   </h4>
-                  <p className="text-gray-600 text-xs lg:text-sm">
+                  {/* <p className="text-gray-600 text-xs lg:text-sm">
                     {testimonial.role} • {testimonial.location}
+                  </p> */}
+                  <p className="text-gray-600 text-xs lg:text-sm">
+                    {testimonial.location}
                   </p>
                 </div>
               </div>
