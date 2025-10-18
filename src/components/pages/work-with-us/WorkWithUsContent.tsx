@@ -34,6 +34,12 @@ const jobs = [
     meta: "Internship | Remote",
     desc: "A great opportunity for a marketing student or recent graduate to gain hands-on experience. You'll assist with social media management, content creation, and digital marketing campaigns to promote our services.",
   },
+  {
+    title: "Photography & Cinematography Experts",
+    meta: "Full-time | On-site",
+    desc: "Someone who want to capture the magic of our events and create compelling moments"
+
+  }
 ];
 
 export default function WorkWithUsContent() {
@@ -159,7 +165,7 @@ ${formData.collaboration}
                   who share our passion for detail, comfort, and excellence. If
                   you<span className="font-sans">’</span>re a wedding planner,
                   designer, photographer, filmmaker, or a behind-the-scenes
-                  magician — we<span className="font-sans">’</span>d love to
+                  magician - we<span className="font-sans">’</span>d love to
                   hear from you.
                 </p>
               </motion.div>
@@ -406,7 +412,7 @@ ${formData.collaboration}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-slate-800 flex items-center gap-2">
                   <Heart className="w-5 h-5 text-[#ea2a33]" />
-                  Let<span className="font-sans">&apos;</span>s Collaborate
+                  Let&apos;s Collaborate
                 </h3>
                 <p className="text-sm text-slate-600">
                   If there<span className="font-sans">&apos;</span>s synergy, we

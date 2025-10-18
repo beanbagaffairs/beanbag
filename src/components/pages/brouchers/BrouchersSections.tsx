@@ -19,6 +19,7 @@ type Card = {
   desc: string;
   cta: string;
   icon: JSX.Element;
+  comingSoon: boolean;
 };
 
 const cards: Card[] = [
@@ -41,6 +42,7 @@ const cards: Card[] = [
         </svg>
       </div>
     ),
+    comingSoon: true
   },
   {
     title: "Destination Wedding Guides",
@@ -60,6 +62,7 @@ const cards: Card[] = [
         </svg>
       </div>
     ),
+    comingSoon: true
   },
   {
     title: "Ad Film Production Pricing",
@@ -85,6 +88,7 @@ const cards: Card[] = [
         </svg>
       </div>
     ),
+    comingSoon: true
   },
 ];
 
@@ -124,7 +128,7 @@ export default function BrochuresSection() {
               viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md"
+              className={`relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md ${card.comingSoon ? 'filter' : ''}`}
             >
               {card.icon}
               <h3 className="mt-4 text-xl font-semibold text-slate-900">
@@ -132,31 +136,37 @@ export default function BrochuresSection() {
               </h3>
               <p className="mt-2 text-slate-600 text-base sm:text-lg">{card.desc}</p>
 
-              <a
-                href="#"
-                className="mt-4 inline-flex items-center gap-2 text-[#1C2042] font-semibold"
-              >
-                {card.cta}
-                <svg
-                  className="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
+              {!card.comingSoon && (
+                <a
+                  href="#"
+                  className="mt-4 inline-flex items-center gap-2 text-[#1C2042] font-semibold"
                 >
-                  <path d="M5 12h14"></path>
-                  <path d="M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
+                  {card.cta}
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              )}
+              {card.comingSoon && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg font-bold rounded-lg">
+                  Coming Soon
+                </div>
+              )}
             </motion.article>
           ))}
         </div>
       </div>
 
-      {/* Bottom: Why Our Packages Work */}
       {/* Bottom: Why Our Packages Work */}
       <div className="mb-8 sm:mb-12 lg:mb-16 max-w-6xl py-8 sm:py-12 lg:py-16 xl:py-20 bg-[#F9EFF1] px-4 sm:px-8 lg:px-12 xl:px-20 mx-auto rounded-xl lg:rounded-2xl">
         <div className="mx-auto max-w-3xl text-center flex flex-col gap-3 sm:gap-4">

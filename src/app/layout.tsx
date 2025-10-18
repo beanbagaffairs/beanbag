@@ -11,9 +11,9 @@ export const metadata = {
   title: "Bean Bag Affairs",
   description: "Premium Wedding Planning and Ad Film Production",
   icons: {
-    icon: "https://images.pexels.com/photos/29173977/pexels-photo-29173977.jpeg",
-    shortcut: "https://images.pexels.com/photos/29173977/pexels-photo-29173977.jpeg",
-    apple: "https://images.pexels.com/photos/29173977/pexels-photo-29173977.jpeg",
+    icon: "/cropped_logo.png",
+    shortcut: "/cropped_logo.png",
+    apple: "/cropped_logo.png",
   },
 };
 

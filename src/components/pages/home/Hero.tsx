@@ -61,14 +61,14 @@ export default function Hero() {
   return (
     <div
       ref={heroRef}
-      className="flex flex-col w-full min-h-[150vh] relative items-center justify-start bg-[#FEE79A] pt-20 sm:pt-32 lg:pt-40"
+      className="flex flex-col w-full min-h-[120vh] md:min-h-[150vh] relative items-center justify-start bg-[#FEE79A] pt-20 sm:pt-32 lg:pt-40"
     >
       {/* Text */}
-      <div className="w-full flex flex-col items-center justify-start gap-4 sm:gap-6 px-4 sm:px-6">
+      <div className="w-full flex flex-col items-center justify-start gap-4 sm:gap-6 px-4 sm:px-6 pt-20">
         <p className="hero-text-1 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold font-formular text-[#1C2042] text-center max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-2xl tracking-tighter">
           Luxury, With Its Shoes Off
         </p>
-        <p className="hero-text-1 text-2xl sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-formular text-[#1C2042] text-center max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl tracking-tighter">
+        <p className="hero-text-1 text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-formular text-[#1C2042] text-center max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl tracking-tighter">
           Because the grandest celebrations feel better when you<span className="font-sans">’re</span> comfortable.
         </p>
         <button

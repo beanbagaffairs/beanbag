@@ -107,7 +107,7 @@ const ContactFormSection = () => {
                 <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> Kolkata, India
               </div>
               <div className="mb-2 flex items-center gap-4">
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> 9876543210
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> +91 9674920655
               </div>
               <div className="mb-2 flex items-center gap-4">
                 <Mail className="w-5 h-5 sm:w-6 sm:h-6" /> beanbagagency@gmail.com

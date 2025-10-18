@@ -1,6 +1,7 @@
 import ContactFormSection from "@/components/pages/contact-us/ContactFormSection";
 import FAQSection from "@/components/pages/contact-us/FAQSection";
 import LocationSection from "@/components/pages/contact-us/LocationSection";
+import { SupportMails } from "@/components/pages/contact-us/SupportMails";
 import HeroSection from "@/components/ui/HeroSection";
 import { Metadata } from "next";
 
@@ -20,6 +21,7 @@ const ContactPage = () => {
       />
       <div className="max-w-[90vw] md:max-w-[80vw] mx-auto flex flex-col gap-20">
         <ContactFormSection />
+        <SupportMails />
         <FAQSection />
         <LocationSection />
       </div>

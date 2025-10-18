@@ -79,14 +79,14 @@ const Contact = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-8 items-center">
 
         {/* Bold Text */}
-        <div className="lg:pl-8 xl:pl-16 w-full lg:w-[80%] text-left order-2 lg:order-1">
+        <div className="lg:pl-8 xl:pl-16 w-full lg:w-[80%] text-left order-1 lg:order-2">
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
             We are here to help you with your business needs. Contact us today to learn more about our services.
           </p>
         </div>
 
         {/* Contact Form */}
-        <div className="w-full flex justify-center lg:justify-end order-1 lg:order-2">
+        <div className="w-full flex justify-center lg:justify-end order-2 lg:order-1">
           <form onSubmit={handleSubmit} className="w-full max-w-md sm:max-w-lg lg:max-w-[40rem] bg-[#1C2042] shadow-lg p-6 sm:p-8 rounded-2xl">
             
             {/* Status Messages */}

@@ -1,5 +1,5 @@
 import AboutUsHero from "@/components/pages/about-us/AboutUsHero";
-import ClientTestimony from "@/components/pages/about-us/ClientTestimony";
+import BehindTheScene from "@/components/pages/about-us/BehindTheScene";
 import MeetTheTeam from "@/components/pages/about-us/MeetTheTeam";
 import { ValuesSection } from "@/components/pages/about-us/OurValues";
 import OurVisionSection from "@/components/pages/about-us/OurVision";
@@ -23,7 +23,7 @@ export default function AboutUsSection() {
       <div className="max-w-[90vw] md:max-w-[80vw] mx-auto flex flex-col gap-20 lg:gap-32">
         <AboutUsHero />
         <MeetTheTeam />
-        <ClientTestimony />
+        <BehindTheScene />
         <ValuesSection />
         <OurVisionSection />
       </div>

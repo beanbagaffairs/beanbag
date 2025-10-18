@@ -18,7 +18,7 @@ const team = [
     id: 1,
     name: "Ms. Sumana Samanta",
     role: "Managing Director",
-    description: "With a strong foundation in business development and international education management, Ms. Sumana Samanta has spent years building growth-driven strategies and meaningful partnerships across global landscapes. At Bean Bag Affairs, she combines that professional experience with her dream — to bring warmth, clarity, and purpose into the world of weddings and productions. Her role revolves around strategic direction, brand growth, and client experience, ensuring that every project reflects both creative finesse and operational excellence.",
+    description: "With a strong foundation in business development and international education management, Ms. Sumana Samanta has spent years building growth-driven strategies and meaningful partnerships across global landscapes. At Bean Bag Affairs, she combines that professional experience with her dream - to bring warmth, clarity, and purpose into the world of weddings and productions. Her role revolves around strategic direction, brand growth, and client experience, ensuring that every project reflects both creative finesse and operational excellence.",
     photo: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433788/IMG-20251013-WA0008_pmfef2.jpg" // Placeholder image
   },
   {
@@ -32,14 +32,14 @@ const team = [
     id: 3,
     name: "Mr. Chiranjit Dutta",
     role: "Creative Head",
-    description: "Mr. Chiranjit Dutta is a cinematographer and media professional whose artistry transforms stories into visual poetry. His creative excellence has been recognized nationally — with his work being featured by India Post on an official stamp and postcard, a rare honor that reflects both skill and vision. At Bean Bag Affairs, he leads the creative and production direction, overseeing everything from concept visualization and cinematography to post-production and film design. His approach is driven by a belief that every frame should carry emotion — and that storytelling, when done right, can turn fleeting moments into timeless legacies.",
-    photo: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433789/Copy_of_InShot_20251008_170103121_gcwoei.jpg" // Placeholder image
+    description: "Mr. Chiranjit Dutta is a cinematographer and media professional whose artistry transforms stories into visual poetry. His creative excellence has been recognized nationally - with his work being featured by India Post on an official stamp and postcard, a rare honor that reflects both skill and vision. At Bean Bag Affairs, he leads the creative and production direction, overseeing everything from concept visualization and cinematography to post-production and film design. His approach is driven by a belief that every frame should carry emotion - and that storytelling, when done right, can turn fleeting moments into timeless legacies.",
+    photo: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760785041/Copy_of_InShot_20251008_170103121_gcwoei_b994c0.jpg" // Placeholder image
   },
   {
     id: 4,
     name: "Mr. Avinava Chakraborty",
     role: "Marketing and Operations",
-    description: "A multi-disciplinary professional, Mr. Avinava Chakraborty has worked across international marketing, commercial advertising, and brand strategy. His career spans collaborations with global IT, lifestyle, and energy brands, where he has helped shape campaigns that connect emotion with purpose. At Bean Bag Affairs, he leads marketing, brand communication, and operational planning, ensuring every project resonates both creatively and commercially. With a deep understanding of audience psychology and storytelling, he bridges the space between brand identity and audience experience, making every campaign not just visible — but unforgettable.",
+    description: "A multi-disciplinary professional, Mr. Avinava Chakraborty has worked across international marketing, commercial advertising, and brand strategy. His career spans collaborations with global IT, lifestyle, and energy brands, where he has helped shape campaigns that connect emotion with purpose. At Bean Bag Affairs, he leads marketing, brand communication, and operational planning, ensuring every project resonates both creatively and commercially. With a deep understanding of audience psychology and storytelling, he bridges the space between brand identity and audience experience, making every campaign not just visible - but unforgettable.",
     photo: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433788/IMG-20251013-WA0009_pxvmui.jpg" // Placeholder image
   },
 ];

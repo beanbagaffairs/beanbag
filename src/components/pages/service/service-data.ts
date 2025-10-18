@@ -674,7 +674,7 @@ export const serviceData = {
         },
         service8: {
           title: "No Drunk Drivers Allowed",
-          description: "Because celebrations should end with smiles, not risks — we ensure no guest drives under the influence.",
+          description: "Because celebrations should end with smiles, not risks - we ensure no guest drives under the influence.",
         },
       },
       whyChooseUs:

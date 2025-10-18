@@ -81,33 +81,31 @@ export function Footer() {
     <footer className="flex relative flex-col min-h-screen w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-8 sm:py-12 md:py-16 lg:py-20 justify-evenly bg-[#1C2042] text-white">
       <div className="flex flex-col">
         <ul className="flex flex-col gap-3 sm:gap-4 md:gap-5 uppercase w-full sm:w-48 md:w-52 lg:w-60">
-          {
-            [
-              { text: "About", href: "/about-us" },
-              { text: "Services", href: "/service" },
-              { text: "Works", href: "/portfolio" },
-              { text: "Contact", href: "/contact-us" },
-              { text: "Privacy Policy", href: "/privacy-policies" },
-              { text: "Work With Us", href: "/work-with-us" },
-            ].map((item, index) => (
-              <li
-                key={index}
-                ref={(el) => {
-                  listItemsRef.current[index] = el;
-                }}
-                className="relative overflow-hidden h-4 sm:h-5 md:h-6 cursor-pointer"
-              >
-                <Link href={item.href}>
-                  <span className="block initial absolute top-0 left-0 w-full h-full font-formular text-sm sm:text-base md:text-lg">
-                    {item.text}
-                  </span>
-                  <span className="block hover absolute top-0 left-0 w-full h-full font-formular text-sm sm:text-base md:text-lg">
-                    {item.text}
-                  </span>
-                </Link>
-              </li>
-            ))
-          }
+          {[
+            { text: "About", href: "/about-us" },
+            { text: "Services", href: "/service" },
+            { text: "Works", href: "/portfolio" },
+            { text: "Contact", href: "/contact-us" },
+            { text: "Privacy Policy", href: "/privacy-policies" },
+            { text: "Work With Us", href: "/work-with-us" },
+          ].map((item, index) => (
+            <li
+              key={index}
+              ref={(el) => {
+                listItemsRef.current[index] = el;
+              }}
+              className="relative overflow-hidden h-4 sm:h-5 md:h-6 cursor-pointer"
+            >
+              <Link href={item.href}>
+                <span className="block initial absolute top-0 left-0 w-full h-full font-formular text-sm sm:text-base md:text-lg">
+                  {item.text}
+                </span>
+                <span className="block hover absolute top-0 left-0 w-full h-full font-formular text-sm sm:text-base md:text-lg">
+                  {item.text}
+                </span>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <Link href="/contact-us">
@@ -121,20 +119,41 @@ export function Footer() {
       <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 justify-between">
         <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase">
           <div className="relative overflow-hidden group/line cursor-pointer">
-            <h1 className="leading-none pb-2 font-formular text-sm sm:text-base">mail</h1>
+            <a
+              target="_blank"
+              href="mailto:beanbagagency@gmail.com"
+              className="leading-none pb-2 font-formular text-sm sm:text-base"
+            >
+              mail
+            </a>
             <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
           </div>
           <div className="relative overflow-hidden group/line cursor-pointer">
-            <h1 className="leading-none pb-2 font-formular text-sm sm:text-base">instagram</h1>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/beanbag_affairs?igsh=bjRlaWphYmUydnow&utm_source=qr"
+              className="leading-none pb-2 font-formular text-sm sm:text-base"
+            >
+              instagram
+            </a>
             <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
           </div>
           <div className="relative overflow-hidden group/line cursor-pointer">
-            <h1 className="leading-none pb-2 font-formular text-sm sm:text-base">linkedin</h1>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/beanbag-affairs/"
+              className="leading-none pb-2 font-formular text-sm sm:text-base"
+            >
+              linkedin
+            </a>
             <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
           </div>
         </div>
         <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase font-formular">
-          <span className="text-sm sm:text-base">2025 <span className="text-white font-serif">©</span> Bean Bag Agency</span>
+          <span className="text-sm sm:text-base">
+            2025 <span className="text-white font-serif">©</span> Bean Bag
+            Agency
+          </span>
         </div>
       </div>
     </footer>

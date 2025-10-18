@@ -24,7 +24,7 @@ export default function AboutUs() {
                 timeless
               </span>
             </p>
-            <div className="ml-8 sm:ml-12 lg:ml-20 mb-8 sm:mb-12 lg:mb-20">
+            <div className="ml-8 sm:ml-12 lg:ml-20 mb-8 sm:mb-12 lg:mb-20 hidden md:visible">
               <SpinningTextBasic />
             </div>
           </div>

@@ -185,9 +185,9 @@ const ServiceSection = () => {
 
   // Category background images
   const categoryImages = {
-    all: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    weddings: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    adFilms: "https://plus.unsplash.com/premium_photo-1682146720153-4d5bdf56f143?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    all: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433817/full_wed_plan-2_lzzp8l.jpg",
+    weddings: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433806/Thumbnail_j4t5zn.jpg",
+    adFilms: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433826/vlcsnap-2025-09-10-14h11m26s354_n0eshy.png"
   };
 
   // Category titles
