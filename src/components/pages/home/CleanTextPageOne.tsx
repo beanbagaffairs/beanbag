@@ -4,7 +4,7 @@ export default function CleanTextPageOne() {
   return (
     <section
       id="clean-text-page-one"
-      className="md:h-[60vh] lg:h-[100vh] w-full bg-white text-gray-800 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-16 sm:py-20 lg:py-28 flex-col md:flex md:items-start md:justify-between"
+      className="md:h-[60vh] lg:h-[100vh] w-full bg-white text-gray-800 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-16 sm:py-20 lg:py-28 flex-col md:flex md:flex-row md:items-start md:justify-between"
     >
       <div className="h-full flex flex-col items-start justify-between">
         <div className="">
