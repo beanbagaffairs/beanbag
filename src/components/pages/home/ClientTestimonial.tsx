@@ -7,9 +7,9 @@ import Link from "next/link";
 
 const testimonials = [
   {
-    name: "Ritika Sharma",
-    role: "Bride",
-    location: "Mumbai",
+    name: "Aman Verma",
+    role: "Creative Director",
+    location: "Delhi",
     comment:
       "The pictures captured the emotions so beautifully. Every shot felt like a scene from a dream. Thank you for making my big day timeless.",
     rating: 5,
@@ -17,9 +17,9 @@ const testimonials = [
       "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760529674/istockphoto-1333001232-612x612_ocgfql.jpg",
   },
   {
-    name: "Aman Verma",
-    role: "Creative Director",
-    location: "Delhi",
+    name: "Ritika Sharma",
+    role: "Bride",
+    location: "Mumbai",
     comment:
       "Their team understood our advertising vision perfectly. Every frame was sharp, bold, and full of impact. A delight to work with!",
     rating: 5,
@@ -27,14 +27,14 @@ const testimonials = [
       "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760529673/istockphoto-1135381120-612x612_qx8wzv.jpg",
   },
   {
-    name: "Priya Mehta",
+    name: "Satish Kumar",
     role: "Marketing Head",
     location: "Bangalore",
     comment:
       "Elegant visuals, professional team, and seamless execution. Their photography elevated our brand campaign in ways we didn't imagine.",
     rating: 5,
     image:
-      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760529656/istockphoto-912910188-2048x2048_l9ny0y.jpg",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1761203333/client_iamge_dbksug.jpg",
   },
 ];
 
@@ -103,7 +103,7 @@ const ClientTestimonials = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-[#333] text-sm sm:text-base lg:text-lg leading-relaxed mb-6 flex-grow">
+              <p className="text-[#333] text-sm sm:text-base lg:text-lg leading-relaxed mb-6 flex-grow font-sans">
                 &quot;{testimonial.comment}&quot;
               </p>
 

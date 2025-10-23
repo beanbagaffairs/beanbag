@@ -103,14 +103,14 @@ const ContactFormSection = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl"
             >
-              <div className="mb-2 flex items-center gap-4">
+              <div className="mb-2 flex items-center gap-4 font-sans">
                 <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> Kolkata, India
               </div>
-              <div className="mb-2 flex items-center gap-4">
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> +91 9674920655
+              <div className="mb-2 flex items-center gap-4 font-sans">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> +91-9674920655
               </div>
-              <div className="mb-2 flex items-center gap-4">
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6" /> beanbagagency@gmail.com
+              <div className="mb-2 flex items-center gap-4 font-sans">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" /> beanbagaffairs@gmail.com
               </div>
             </motion.div>
           </div>
@@ -125,7 +125,9 @@ const ContactFormSection = () => {
 
               {/* Phone Button */}
               <motion.a
-                href="tel:9876543210"
+                href="tel:9674920655"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="flex items-center gap-3 p-3 sm:p-4 bg-gray-50 border border-gray-200 rounded-2xl hover:bg-gray-100 transition-colors group"
@@ -171,7 +173,9 @@ const ContactFormSection = () => {
 
               {/* Email Button */}
               <motion.a
-                href="mailto:beanbagagency@gmail.com"
+                href="mailto:beanbagaffairs@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="flex items-center gap-3 p-3 sm:p-4 bg-gray-50 border border-gray-200 rounded-2xl hover:bg-gray-100 transition-colors group"

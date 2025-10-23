@@ -32,7 +32,7 @@ export default function Works() {
   const router = useRouter();
 
   return (
-    <section className="h-auto w-full bg-[#F9EFF1] py-8 sm:py-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+    <section className="h-auto w-full bg-[#F9EFF1] py-14 sm:py-16 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
       <motion.div
         className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] xl:w-[25%] leading-1"
         initial={{ opacity: 0, y: 30 }}

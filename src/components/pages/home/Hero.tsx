@@ -61,7 +61,7 @@ export default function Hero() {
   return (
     <div
       ref={heroRef}
-      className="flex flex-col w-full min-h-[120vh] md:min-h-[150vh] relative items-center justify-start bg-[#FEE79A] pt-20 sm:pt-32 lg:pt-40"
+      className="flex flex-col w-full min-h-[80vh] md:min-h-[150vh] lg:min-h-[180vh] relative items-center justify-start bg-[#FEE79A] pt-20 sm:pt-32 lg:pt-40"
     >
       {/* Text */}
       <div className="w-full flex flex-col items-center justify-start gap-4 sm:gap-6 px-4 sm:px-6 pt-20">
@@ -69,14 +69,15 @@ export default function Hero() {
           Luxury, With Its Shoes Off
         </p>
         <p className="hero-text-1 text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-2xl font-formular text-[#1C2042] text-center max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl tracking-tighter">
-          Because the grandest celebrations feel better when you<span className="font-sans">’re</span> comfortable.
+          Because the grandest celebrations feel better when you<span className="font-sans">’</span>re comfortable.
         </p>
-        <button
+        <a
           type="button"
+          href="/service"
           className="hero-button hover:bg-[#343748] bg-[#1C2042] font-bold text-white font-formular rounded-full text-center shadow-lg transition-all duration-300 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base"
         >
           <span>Begin Your Affair With Us</span>
-        </button>
+        </a>
       </div>
 
       {/* Main Video Container */}

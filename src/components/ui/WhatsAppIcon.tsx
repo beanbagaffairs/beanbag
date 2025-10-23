@@ -1,7 +1,7 @@
 import React from "react";
 
 const WhatsAppIcon: React.FC = () => {
-  const whatsappNumber = "+918668721925"; // Replace with your WhatsApp number
+  const whatsappNumber = "+919674920655"; // Replace with your WhatsApp number
   const message = "Hello from your website!"; // Optional default message
 
   return (
