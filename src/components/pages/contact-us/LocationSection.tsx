@@ -33,12 +33,12 @@ const LocationSection = () => {
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-formular leading-none tracking-tighter mb-4 sm:mb-6">
+        <h1 className="text-xl sm:text-2xl font-thin font-formular leading-none tracking-tighter mb-4">
           Our Location
         </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">Kolkata, India</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Kolkata, India</h2>
         <div className="space-y-1 text-gray-700 text-sm sm:text-base md:text-lg">
-          <p className="font-semibold">Beanbag Agency</p>
+          <p className="font-semibold">Bean Bag Affairs</p>
           <p>123 Tech Boulevard</p>
         </div>
         <a

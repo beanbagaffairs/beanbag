@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import ClientVideo from "@/components/ui/ClientVideo";
+import { useSearchParams } from "next/navigation"; // Import useSearchParams
 
 const weddingServices = [
   {
@@ -17,7 +19,7 @@ const weddingServices = [
     category: "weddings",
   },
   // {
-  //   id: 2,
+  //   id: 2, // This was commented out in weddingServices
   //   title: "Brand Collaborations",
   //   description:
   //     "Great celebrations are also great stages for brands. At Bean Bag Affairs, we curate collaborations between events and brands that feel natural, authentic, and mutually rewarding.",
@@ -110,6 +112,16 @@ const weddingServices = [
 
 const adFilmServices = [
   {
+    id: 2, // Added ID 2 as per prompt requirement, mapping to adFilms
+    title: "Brand Collaborations",
+    description:
+      "Great celebrations are also great stages for brands. At Bean Bag Affairs, we curate collaborations between events and brands that feel natural, authentic, and mutually rewarding.",
+    href: "/service/brand-collaborations",
+    imageSrc:
+      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758311337/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/weddings%20and%20events/Brand%20Collaborations/brand_collab_6_vzhfdz.jpg",
+    category: "adFilms",
+  },
+  {
     id: 12,
     title: "Concept and Script Development",
     description:
@@ -172,7 +184,29 @@ type ServiceItem = {
 };
 
 const ServiceSection = () => {
+  const searchParams = useSearchParams(); // Get search parameters
+  const serviceId = searchParams.get("id"); // Get the 'id' query parameter
+
   const services = [...weddingServices, ...adFilmServices];
+
+  // Function to map service ID to category
+  const getCategoryFromId = (id: string | null): "all" | "weddings" | "adFilms" | null => {
+    if (!id) return null; // No ID provided
+
+    const numericId = parseInt(id, 10);
+    if (isNaN(numericId)) return null; // ID is not a number
+
+    // Check wedding services
+    if (weddingServices.some(service => service.id === numericId)) {
+      return "weddings";
+    }
+    // Check ad film services
+    if (adFilmServices.some(service => service.id === numericId)) {
+      return "adFilms";
+    }
+
+    return null; // ID not found in any category
+  };
 
   // Category descriptions
   const categoryDescriptions = {
@@ -218,28 +252,35 @@ const ServiceSection = () => {
 
   const localStorageKey = "serviceFilter";
 
-  const [filter, setFilter] = useState<"all" | "weddings" | "adFilms" | null>(
-    null
-  );
+  // Initialize filter state to null. It will be set in useEffect after hydration.
+  const [filter, setFilter] = useState<"all" | "weddings" | "adFilms" | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    let initialFilter: "all" | "weddings" | "adFilms" | null = null;
+
+    // Prioritize filter from URL parameter
+    const initialFilterFromId = getCategoryFromId(serviceId);
+    if (initialFilterFromId) {
+      initialFilter = initialFilterFromId;
+    } else if (typeof window !== "undefined") {
+      // Fallback to localStorage if no ID in URL
       const storedFilter = localStorage.getItem(localStorageKey) as
         | "all"
         | "weddings"
         | "adFilms"
         | null;
-      if (storedFilter) {
-        setFilter(storedFilter);
-      } else {
-        localStorage.setItem(localStorageKey, "all");
-      }
+      initialFilter = storedFilter || "all"; // Default to 'all' if nothing else is found
+    } else {
+      // Default for SSR or environments without window
+      initialFilter = "all";
     }
-  }, []);
+    setFilter(initialFilter);
+  }, [serviceId]); // Re-run effect if serviceId changes
 
+  // Update localStorage when filter changes
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem(localStorageKey, filter || "all");
+    if (typeof window !== "undefined" && filter) { // Ensure filter is not null before setting
+      localStorage.setItem(localStorageKey, filter);
     }
   }, [filter]);
 
@@ -346,7 +387,7 @@ const ServiceSection = () => {
             ) : service.videoSrc ? (
               <Link href={service.href}>
                 <div className="relative group hover:scale-[1.02] sm:hover:scale-105 transition-all duration-300 cursor-pointer">
-                  <video
+                  <ClientVideo
                     src={service.videoSrc}
                     autoPlay
                     muted

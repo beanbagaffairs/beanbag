@@ -78,7 +78,7 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="flex relative flex-col min-h-screen w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-8 sm:py-12 md:py-16 lg:py-20 justify-evenly bg-[#1C2042] text-white">
+    <footer className="flex relative flex-col min-h-[70vh] lg:min-h-screen w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-8 sm:py-12 md:py-16 lg:py-20 justify-evenly bg-[#1C2042] text-white">
       <div className="flex flex-col">
         <ul className="flex flex-col gap-3 sm:gap-4 md:gap-5 uppercase w-full sm:w-48 md:w-52 lg:w-60">
           {[
@@ -110,7 +110,7 @@ export function Footer() {
       </div>
       <Link href="/contact-us">
         <div className="relative overflow-hidden group/line py-8 sm:py-10 md:py-12 mx-auto w-fit cursor-pointer">
-          <h1 className="w-full text-[15vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] uppercase leading-none font-formular text-center">
+          <h1 className="w-full text-[15vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] xl:text-[6vw] uppercase leading-none text-center italic">
             Lets Talk
           </h1>
           <span className="block w-full bg-white h-2 sm:h-3 -translate-x-full group-hover/line:translate-x-0 duration-500 opacity-0 group-hover/line:opacity-100" />
@@ -121,7 +121,7 @@ export function Footer() {
           <div className="relative overflow-hidden group/line cursor-pointer">
             <a
               target="_blank"
-              href="mailto:beanbagagency@gmail.com"
+              href="mailto:beanbagaffairs@gmail.com"
               className="leading-none pb-2 font-formular text-sm sm:text-base"
             >
               mail
@@ -151,8 +151,7 @@ export function Footer() {
         </div>
         <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase font-formular">
           <span className="text-sm sm:text-base">
-            2025 <span className="text-white font-serif">©</span> Bean Bag
-            Agency
+            2025 <span className="text-white font-serif">©</span> BeanBagAffairs
           </span>
         </div>
       </div>

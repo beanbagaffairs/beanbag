@@ -5,7 +5,7 @@ export const serviceData = {
       param: "brand-promotion-add-on",
       title: "Brand Promotion Add-On",
       description1:
-        "A great film deserves a great audience. At Bean Bag Affairs, we go beyond production with brand promotion services that ensure your story doesn’t just look extraordinary - it reaches the right people, in the right way, at the right time.",
+        "A great film deserves a great audience. At Bean Bag Affairs, we go beyond production with brand promotion services that ensure your story doesn't just look extraordinary - it reaches the right people, in the right way, at the right time.",
       description2:
         "From digital ad strategies to influencer collaborations, we position your content where it will have the most impact, turning films into conversations and campaigns into movements.",
       services: [
@@ -41,7 +41,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because a brilliant story deserves an audience worthy of it. With Bean Bag Affairs, your film doesn’t just exist - it makes an entrance.",
+        "Because a brilliant story deserves an audience worthy of it. With Bean Bag Affairs, your film doesn't just exist - it makes an entrance.",
       cta: "Promote My Story",
       ctaLink: "/contact-us",
       category: "adFilms",
@@ -58,7 +58,7 @@ export const serviceData = {
       param: "post-production",
       title: "Post Production - Editing, VFX, Scoring",
       description1:
-        "The magic of storytelling doesn’t end when the cameras stop rolling - in fact, that’s where it truly begins. At Bean Bag Affairs, our post-production services transform raw footage into polished masterpieces that captivate audiences and elevate brands.",
+        "The magic of storytelling doesn't end when the cameras stop rolling - in fact, that's where it truly begins. At Bean Bag Affairs, our post-production services transform raw footage into polished masterpieces that captivate audiences and elevate brands.",
       description2:
         "From seamless editing to cinematic colour grading, immersive sound design, and world-class VFX, we ensure that every frame, every beat, and every moment is refined to perfection.",
       services: [
@@ -96,7 +96,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because editing isn’t about cutting - it’s about creating. With Bean Bag Affairs, your production won’t just look professional; it will feel unforgettable.",
+        "Because editing isn't about cutting - it's about creating. With Bean Bag Affairs, your production won't just look professional; it will feel unforgettable.",
       cta: "Perfect My Film",
       ctaLink: "/contact-us",
       category: "adFilms",
@@ -143,7 +143,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because casting is not just about filling a role - it’s about creating connection. With Bean Bag Affairs, your project will always have the right people in the right place, telling the right story.",
+        "Because casting is not just about filling a role - it's about creating connection. With Bean Bag Affairs, your project will always have the right people in the right place, telling the right story.",
       cta: "Find My Perfect Cast",
       ctaLink: "/contact-us",
       category: "adFilms",
@@ -164,7 +164,7 @@ export const serviceData = {
       description1:
         "Ideas may be born on paper, but magic happens on set. At Bean Bag Affairs, our production services cover everything from lights and lenses to locations and logistics, ensuring your story is told with cinematic precision and artistic flair.",
       description2:
-        "Whether it’s a wedding film that captures the poetry of vows, a high-end commercial shoot, or a brand video that needs polish and professionalism, we bring together the right crew, equipment, and expertise to make it happen seamlessly.",
+        "Whether it's a wedding film that captures the poetry of vows, a high-end commercial shoot, or a brand video that needs polish and professionalism, we bring together the right crew, equipment, and expertise to make it happen seamlessly.",
       services: [
         "Filming Logistics",
         "Crew and Technical Setup",
@@ -201,7 +201,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because production isn’t just about cameras rolling - it’s about orchestrating dozens of moving parts into a single, seamless vision. With Bean Bag Affairs, the process feels less like hard work and more like pure artistry.",
+        "Because production isn't just about cameras rolling - it's about orchestrating dozens of moving parts into a single, seamless vision. With Bean Bag Affairs, the process feels less like hard work and more like pure artistry.",
       cta: "Start My Production Journey",
       ctaLink: "/contact-us",
       category: "adFilms",
@@ -215,9 +215,9 @@ export const serviceData = {
       param: "concept-script-development",
       title: "Concept and Script Development",
       description1:
-        "Every powerful film begins with a single spark - an idea. At Bean Bag Affairs, we take that spark and shape it into stories that captivate, connect, and convert. Our concept and script development services ensure that your brand’s voice is heard with clarity, creativity, and impact.",
+        "Every powerful film begins with a single spark - an idea. At Bean Bag Affairs, we take that spark and shape it into stories that captivate, connect, and convert. Our concept and script development services ensure that your brand's voice is heard with clarity, creativity, and impact.",
       description2:
-        "Whether it’s a heartfelt wedding film, a high-energy commercial, or a sleek corporate brand story, we combine imagination with strategy to deliver concepts that stay with audiences long after the credits roll.",
+        "Whether it's a heartfelt wedding film, a high-energy commercial, or a sleek corporate brand story, we combine imagination with strategy to deliver concepts that stay with audiences long after the credits roll.",
       services: [
         "Creative Consulting",
         "Storyboarding",
@@ -261,7 +261,7 @@ export const serviceData = {
       description1:
         "Every celebration has its special guests and unique requirements. At Bean Bag Affairs, we go beyond the expected with bespoke services designed for exclusivity, privacy, and indulgence.",
       description2:
-        "Whether it’s managing VIP security, arranging private concierge services, or curating a personal wedding website for your guests - we make sure every detail reflects the luxury and comfort you deserve.",
+        "Whether it's managing VIP security, arranging private concierge services, or curating a personal wedding website for your guests - we make sure every detail reflects the luxury and comfort you deserve.",
       services: [
         "Personal Concierge and Assistants",
         "Guest Security and Privacy Management",
@@ -295,7 +295,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because true luxury isn’t about how much you show - it’s about how well you’re cared for. With Bean Bag Affairs, your celebration will carry the quiet assurance of exclusivity, where every VIP feels at ease.",
+        "Because true luxury isn't about how much you show - it's about how well you're cared for. With Bean Bag Affairs, your celebration will carry the quiet assurance of exclusivity, where every VIP feels at ease.",
       cta: "Create My VIP Experience",
       ctaLink: "/contact-us",
       category: "weddings",
@@ -341,11 +341,11 @@ export const serviceData = {
         },
         service4: {
           title: "24/7 Coordination",
-          description: "Because celebrations don’t pause, and neither do we.",
+          description: "Because celebrations don't pause, and neither do we.",
         },
       },
       whyChooseUs:
-        "Because the magic of a wedding isn’t just in the moments - it’s in how effortlessly those moments unfold. With Bean Bag Affairs, your guests will remember how easy everything felt, not the effort it took behind the scenes.",
+        "Because the magic of a wedding isn't just in the moments - it's in how effortlessly those moments unfold. With Bean Bag Affairs, your guests will remember how easy everything felt, not the effort it took behind the scenes.",
       cta: "Move My Guests with Ease",
       ctaLink: "/contact-us",
       category: "adFilms",
@@ -362,7 +362,7 @@ export const serviceData = {
       param: "accommodation-hospitality",
       title: "Accommodation and Hospitality",
       description1:
-        "A true celebration isn’t just about the main event - it’s about how guests feel from the moment they arrive until the last farewell. At Bean Bag Affairs, we ensure your loved ones are not just hosted, but genuinely cared for, with premium accommodation and personalised hospitality services.",
+        "A true celebration isn't just about the main event - it's about how guests feel from the moment they arrive until the last farewell. At Bean Bag Affairs, we ensure your loved ones are not just hosted, but genuinely cared for, with premium accommodation and personalised hospitality services.",
       description2:
         "From luxurious bridal suites to curated welcome kits, from concierge desks to seamless guest experiences - every detail is designed so that your family and friends feel as cherished as you do.",
       services: [
@@ -398,7 +398,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because guests do not just attend your wedding - they become part of your story. With Bean Bag Affairs, hospitality is not a service; it’s a feeling of home, wrapped in luxury.",
+        "Because guests do not just attend your wedding - they become part of your story. With Bean Bag Affairs, hospitality is not a service; it's a feeling of home, wrapped in luxury.",
       cta: "Host My Guests in Style",
       ctaLink: "/contact-us",
       category: "adFilms",
@@ -450,7 +450,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because your venue is more than a space - it’s the canvas of your memories. With Bean Bag Affairs, every detail of your décor becomes part of the poetry of your celebration.",
+        "Because your venue is more than a space - it's the canvas of your memories. With Bean Bag Affairs, every detail of your décor becomes part of the poetry of your celebration.",
       cta: "Design My Dream Venue",
       ctaLink: "/contact-us",
       category: "weddings",
@@ -507,12 +507,19 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because entertainment is not just about filling time - it’s about filling hearts. With Bean Bag Affairs, your stage becomes the heartbeat of your celebration.",
+        "Because entertainment is not just about filling time - it's about filling hearts. With Bean Bag Affairs, your stage becomes the heartbeat of your celebration.",
       cta: "Light Up My Event",
       ctaLink: "/contact-us",
       category: "adFilms",
-      imageSrc:
-        "https://images.unsplash.com/photo-1651418481287-20819065dc68?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      videoSrc:
+        "https://res.cloudinary.com/djkd6cyxb/video/upload/v1761548317/music_video_m5oumu.mp4",
+      images: [
+        "https://res.cloudinary.com/djkd6cyxb/video/upload/v1761548319/NGO_commercial_ad_lpa4az.mp4",
+        "https://res.cloudinary.com/djkd6cyxb/video/upload/v1761548318/durga_event_eszcde.mp4",
+        "https://res.cloudinary.com/djkd6cyxb/video/upload/v1761548317/music_video_m5oumu.mp4",
+        "https://res.cloudinary.com/djkd6cyxb/video/upload/v1761548317/musical_event_Art_o0ce26.mp4",
+        "https://res.cloudinary.com/djkd6cyxb/video/upload/v1761548316/Bike_launch_event_uimjkh.mp4"
+      ],
     },
 
     "food-beverage-catering": {
@@ -573,7 +580,7 @@ export const serviceData = {
       param: "photography-videography",
       title: "Photography and Videography",
       description1:
-        "Some moments happen only once - and at Bean Bag Affairs, we make sure they’re never forgotten. Our photography and videography services capture emotions, details, and stories in frames that last a lifetime.",
+        "Some moments happen only once - and at Bean Bag Affairs, we make sure they're never forgotten. Our photography and videography services capture emotions, details, and stories in frames that last a lifetime.",
       description2:
         "From pre-wedding shoots to cinematic wedding films, from candid captures to drone aerials, we combine artistry with technology to create memories as grand as your celebration.",
       services: [
@@ -674,7 +681,7 @@ export const serviceData = {
         },
       },
       whyChooseUs:
-        "Because weddings are too precious to be stressful. With Bean Bag Affairs, you’ll live in the joy of the moment while we handle the details.",
+        "Because weddings are too precious to be stressful. With Bean Bag Affairs, you'll live in the joy of the moment while we handle the details.",
       cta: "Plan My Dream Wedding",
       ctaLink: "/contact-us",
       category: "weddings",

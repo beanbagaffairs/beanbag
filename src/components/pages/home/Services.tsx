@@ -99,9 +99,9 @@ export default function Services() {
               </h3>
               <p className="mt-2 sm:mt-3 text-sm sm:text-base text-white line-clamp-3">{service.description}</p>
               <div className="mt-4 sm:mt-6 flex justify-center">
-                <Link href="/service" className="flex items-center gap-2 border border-white text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-white hover:text-[#1C2042] transition-all duration-300 text-sm sm:text-base">
+                <a href={`/service?id=${service.id}`} className="flex items-center gap-2 border border-white text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-white hover:text-[#1C2042] transition-all duration-300 text-sm sm:text-base">
                   Learn More <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

@@ -11,7 +11,7 @@ import ClientTestimonials from "@/components/pages/home/ClientTestimonial";
 
 export const metadata: Metadata = {
   title: "Bean Bag Affairs",
-  description: "We are a leading bean bag agency in India.",
+  description: "We are event management and production company in India.",
 };
 
 export default function Home() {

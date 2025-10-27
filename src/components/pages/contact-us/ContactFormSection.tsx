@@ -12,17 +12,19 @@ const ContactFormSection = () => {
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     // Clear any previous error when user starts typing
-    if (submitStatus === 'error') {
-      setSubmitStatus('idle');
-      setErrorMessage('');
+    if (submitStatus === "error") {
+      setSubmitStatus("idle");
+      setErrorMessage("");
     }
   };
 
@@ -31,37 +33,41 @@ const ContactFormSection = () => {
 
     // Basic validation
     if (!form.name || !form.email || !form.message) {
-      setSubmitStatus('error');
-      setErrorMessage('Please fill in all required fields.');
+      setSubmitStatus("error");
+      setErrorMessage("Please fill in all required fields.");
       return;
     }
 
     setIsLoading(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ...form,
-          formType: 'contact' // Assuming this is needed by the API
+          formType: "contact", // Assuming this is needed by the API
         }),
       });
 
       if (response.ok) {
-        setSubmitStatus('success');
+        setSubmitStatus("success");
         setForm({ name: "", email: "", phone: "", message: "" }); // Clear form on success
       } else {
         const errorData = await response.json();
-        setSubmitStatus('error');
-        setErrorMessage(errorData.error || 'Failed to send message. Please try again.');
+        setSubmitStatus("error");
+        setErrorMessage(
+          errorData.error || "Failed to send message. Please try again."
+        );
       }
     } catch (error) {
-      setSubmitStatus('error');
-      setErrorMessage('Network error. Please check your connection and try again.');
+      setSubmitStatus("error");
+      setErrorMessage(
+        "Network error. Please check your connection and try again."
+      );
     } finally {
       setIsLoading(false);
     }
@@ -94,8 +100,8 @@ const ContactFormSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl mb-4 sm:mb-6"
             >
-              We are a leading agency specializing in photography and
-              videography services. Contact us using the information below.
+              We are a leading agency specializing in wedding management and
+              production services. Contact us using the information below.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -110,7 +116,8 @@ const ContactFormSection = () => {
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> +91-9674920655
               </div>
               <div className="mb-2 flex items-center gap-4 font-sans">
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6" /> beanbagaffairs@gmail.com
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" />{" "}
+                beanbagaffairs@gmail.com
               </div>
             </motion.div>
           </div>
@@ -121,7 +128,9 @@ const ContactFormSection = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mt-6 sm:mt-8 space-y-4"
             >
-              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-2xl font-semibold mb-4">Quick Access</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-2xl font-semibold mb-4">
+                Quick Access
+              </h3>
 
               {/* Phone Button */}
               <motion.a
@@ -136,7 +145,9 @@ const ContactFormSection = () => {
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-medium text-gray-700">Phone</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-medium text-gray-700">
+                    Phone
+                  </p>
                   <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-base text-gray-600">
                     For quick calls and instant connection.
                   </p>
@@ -184,7 +195,9 @@ const ContactFormSection = () => {
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-medium text-gray-700">Email</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-medium text-gray-700">
+                    Email
+                  </p>
                   <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-base text-gray-600">
                     Because some stories need to be written down first.
                   </p>
@@ -200,13 +213,14 @@ const ContactFormSection = () => {
         {/* Contact Form Section */}
         <div className="w-full lg:w-1/2 xl:w-2/5">
           {/* Status Messages */}
-          {submitStatus === 'success' && (
+          {submitStatus === "success" && (
             <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-              Message sent successfully! We<span className="font-sans">&apos;</span>ll get back to you soon.
+              Message sent successfully! We
+              <span className="font-sans">&apos;</span>ll get back to you soon.
             </div>
           )}
 
-          {submitStatus === 'error' && (
+          {submitStatus === "error" && (
             <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg">
               {errorMessage}
             </div>
@@ -302,7 +316,7 @@ const ContactFormSection = () => {
               disabled={isLoading}
               className="bg-[#1C2042] text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base rounded-2xl sm:rounded-3xl hover:bg-[#1C2042]/90 transition disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
-              {isLoading ? 'Sending...' : 'Send Message'}
+              {isLoading ? "Sending..." : "Send Message"}
             </motion.button>
 
             <motion.div

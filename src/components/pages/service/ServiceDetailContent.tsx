@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { serviceData } from "@/components/pages/service/service-data";
+import ClientVideo from "@/components/ui/ClientVideo";
 
 interface ServiceDetailContentProps {
   serviceName: string;
@@ -75,7 +76,7 @@ const HeroSection = ({ service }: { service: any }) => (
                 priority
               />
             ) : service.videoSrc ? (
-              <video
+              <ClientVideo
                 src={service.videoSrc}
                 autoPlay
                 muted
@@ -206,7 +207,7 @@ const GallerySection = ({ service }: { service: any }) => {
                   onClick={() => !isVideo && openModal(index)}
                 >
                   {isVideo ? (
-                    <video
+                    <ClientVideo
                       src={media}
                       autoPlay
                       muted

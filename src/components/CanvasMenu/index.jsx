@@ -105,7 +105,7 @@ export default function SidebarNav() {
               {/* Brand */}
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-formular font-bold text-white drop-shadow-lg">
-                  Bean Bag Agency
+                  Bean Bag Affairs
                 </h2>
                 <p className="text-white/90 text-sm mt-1 drop-shadow">
                   Navigate to your destination

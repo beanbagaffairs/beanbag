@@ -1,7 +1,6 @@
 import ContactFormSection from "@/components/pages/contact-us/ContactFormSection";
 import FAQSection from "@/components/pages/contact-us/FAQSection";
 import LocationSection from "@/components/pages/contact-us/LocationSection";
-import { SupportMails } from "@/components/pages/contact-us/SupportMails";
 import HeroSection from "@/components/ui/HeroSection";
 import { Metadata } from "next";
 
@@ -13,15 +12,15 @@ export const metadata: Metadata = {
 const ContactPage = () => {
 
   return (
-    <main className="text-[#1C2042] bg-white font-formular flex flex-col gap-20">
+    <main className="text-[#1C2042] bg-white font-formular flex flex-col gap-20 overflow-x-hidden">
       {/* Top Section */}
       <HeroSection
         title="Contact Us"
-        description="Pull up a bean bag, pour yourself a coffee, and let’s talk about creating something extraordinary. At Bean Bag Affairs, we believe the first conversation should feel just as comfortable as the celebrations we design."
+        description="Pull up a bean bag, pour yourself a coffee, and lets talk about creating something extraordinary. At Bean Bag Affairs, we believe the first conversation should feel just as comfortable as the celebrations we design."
       />
-      <div className="max-w-[90vw] md:max-w-[80vw] mx-auto flex flex-col gap-20">
+      <div className="max-w-[90vw] md:max-w-[90vw] mx-auto flex flex-col gap-20 overflow-x-hidden">
         <ContactFormSection />
-        <SupportMails />
+        {/* <SupportMails /> */}
         <FAQSection />
         <LocationSection />
       </div>

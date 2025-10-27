@@ -3,30 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { InfiniteSliderHoverSpeed } from "./components/InfiniteSliderHoverSpeed";
-import HorizontalScrollImages from "./components/HorizontalScrollImages";
 import { InView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import ClientVideo from "@/components/ui/ClientVideo";
-
-const imageUrls = [
-  {
-    src: "/homepage/work1.jpg",
-    alt: "Work 1",
-  },
-  {
-    src: "/homepage/work2.jpg",
-    alt: "Work 2",
-  },
-  {
-    src: "/homepage/work3.jpg",
-    alt: "Work 3",
-  },
-  {
-    src: "/homepage/work4.jpg",
-    alt: "Work 4",
-  },
-];
 
 export default function Works() {
   const router = useRouter();
@@ -34,7 +13,7 @@ export default function Works() {
   return (
     <section className="h-auto w-full bg-[#F9EFF1] py-14 sm:py-16 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
       <motion.div
-        className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] xl:w-[25%] leading-1"
+        className="w-[70%] sm:w-[50%] md:w-[50%] lg:w-[60%] xl:w-[35%] leading-1"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -54,14 +33,14 @@ export default function Works() {
           transition={{ duration: 0.8 }}
           className="w-full lg:flex-1 h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[80vh] relative overflow-hidden rounded-2xl sm:rounded-3xl"
         >
-          <Link href="/portfolio">
+          <a href="/portfolio">
             <Image
               src="/homepage/work1.jpg"
               alt="Main Work Image"
               fill
               className="object-cover cursor-pointer hover:scale-105 transition-all duration-300"
             />
-          </Link>
+          </a>
         </motion.div>
 
         {/* Right Side - Two Videos */}
@@ -72,7 +51,7 @@ export default function Works() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="w-full h-[30vh] sm:h-[35vh] md:h-[40vh] lg:flex-1 lg:h-[40vh] relative rounded-2xl sm:rounded-3xl overflow-hidden"
           >
-            <Link href="/portfolio">
+            <a href="/portfolio">
               <InView>
                 <ClientVideo
                   src="/homepage/work_showcase.mp4"
@@ -83,7 +62,7 @@ export default function Works() {
                   className="object-cover w-full h-full cursor-pointer"
                 />
               </InView>
-            </Link>
+            </a>
           </motion.div>
 
           <motion.div
@@ -92,7 +71,7 @@ export default function Works() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="w-full h-[30vh] sm:h-[35vh] md:h-[40vh] lg:flex-1 lg:h-[40vh] relative rounded-2xl sm:rounded-3xl overflow-hidden"
           >
-            <Link href="/portfolio">
+            <a href="/portfolio">
               <InView>
                 <ClientVideo
                   src="/homepage/work_showcase_2.mp4"
@@ -103,7 +82,7 @@ export default function Works() {
                   className="object-cover w-full h-full scale-150"
                 />
               </InView>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>
