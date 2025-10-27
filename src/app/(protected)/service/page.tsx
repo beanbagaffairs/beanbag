@@ -2,6 +2,7 @@ import ServiceSection from '@/components/pages/service/ServiceSection';
 import "@/app/globals.css";
 import HeroSection from '@/components/ui/HeroSection';
 import { Metadata } from "next";
+import { Suspense } from 'react'; // Import Suspense
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -17,7 +18,9 @@ export default function Service() {
         bgColor="#BADBE5"
       />
       <div className="max-w-[90vw] md:max-w-[80vw] mx-auto">
-        <ServiceSection />
+        <Suspense fallback={<div>Loading services...</div>}> {/* Wrap ServiceSection with Suspense */}
+          <ServiceSection />
+        </Suspense>
       </div>
     </main>
   );
