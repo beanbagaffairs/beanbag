@@ -184,7 +184,7 @@ const ContactFormSection = () => {
 
               {/* Email Button */}
               <motion.a
-                href="mailto:beanbagaffairs@gmail.com"
+                href="mailto:contact@beanbagaffairs.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}

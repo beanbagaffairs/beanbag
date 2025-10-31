@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
     // Send email
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_TO || 'beanbagaffairs@gmail.com',
+      to: process.env.EMAIL_TO || 'contact@beanbagaffairs.com',
       subject: subject,
       html: htmlContent,
       replyTo: email,

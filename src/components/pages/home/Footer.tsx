@@ -121,7 +121,7 @@ export function Footer() {
           <div className="relative overflow-hidden group/line cursor-pointer">
             <a
               target="_blank"
-              href="mailto:beanbagaffairs@gmail.com"
+              href="mailto:contact@beanbagaffairs.com"
               className="leading-none pb-2 font-formular text-sm sm:text-base"
             >
               mail
