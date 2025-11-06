@@ -65,7 +65,7 @@ const weddingServices = [
       "Artist bookings (DJs, classical musicians, folk performers), Stage and sound setup, Celebrity performance coordination",
     href: "/service/entertainment-musical-events",
     imageSrc:
-      "https://images.unsplash.com/photo-1651418481287-20819065dc68?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1761548444/Thumbnail_sjfcaj.jpg",
     category: "weddings",
   },
   {

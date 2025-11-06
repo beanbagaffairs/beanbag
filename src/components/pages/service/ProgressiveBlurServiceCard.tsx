@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ProgressiveBlur } from "../../../../components/motion-primitives/progressive-blur";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
