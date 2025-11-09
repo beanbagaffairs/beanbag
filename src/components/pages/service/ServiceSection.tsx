@@ -264,11 +264,28 @@ const ServiceSection = () => {
       initialFilter = initialFilterFromId;
     } else if (typeof window !== "undefined") {
       // Fallback to localStorage if no ID in URL
-      const storedFilter = localStorage.getItem(localStorageKey) as
-        | "all"
-        | "weddings"
-        | "adFilms"
-        | null;
+      const storedData = localStorage.getItem(localStorageKey);
+      let storedFilter: "all" | "weddings" | "adFilms" | null = null;
+      
+      if (storedData) {
+        try {
+          const { filter, timestamp } = JSON.parse(storedData);
+          const now = Date.now();
+          const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+          
+          // Check if the stored data is still valid (less than 1 hour old)
+          if (now - timestamp < oneHour) {
+            storedFilter = filter;
+          } else {
+            // Data expired, remove it
+            localStorage.removeItem(localStorageKey);
+          }
+        } catch (error) {
+          // Invalid JSON, remove the corrupted data
+          localStorage.removeItem(localStorageKey);
+        }
+      }
+      
       initialFilter = storedFilter || "all"; // Default to 'all' if nothing else is found
     } else {
       // Default for SSR or environments without window
@@ -277,10 +294,14 @@ const ServiceSection = () => {
     setFilter(initialFilter);
   }, [serviceId]); // Re-run effect if serviceId changes
 
-  // Update localStorage when filter changes
+  // Update localStorage when filter changes with expiration timestamp
   useEffect(() => {
     if (typeof window !== "undefined" && filter) { // Ensure filter is not null before setting
-      localStorage.setItem(localStorageKey, filter);
+      const dataToStore = {
+        filter: filter,
+        timestamp: Date.now()
+      };
+      localStorage.setItem(localStorageKey, JSON.stringify(dataToStore));
     }
   }, [filter]);
 
