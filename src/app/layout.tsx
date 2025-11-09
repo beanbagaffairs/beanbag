@@ -11,7 +11,9 @@ export const metadata = {
   title: "Bean Bag Affairs",
   description: "Premium Wedding Planning and Ad Film Production",
   icons: {
-    icon: "/cropped_logo.png",
+    icon: [
+      { url: "/cropped_logo.png", sizes: "any", type: "image/png" }
+    ],
     shortcut: "/cropped_logo.png",
     apple: "/cropped_logo.png",
   },

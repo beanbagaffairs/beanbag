@@ -6,7 +6,7 @@ export default function CleanTextPageOne() {
       id="clean-text-page-one"
       className="w-full md:h-[80vh] lg:h-[100vh] bg-white text-gray-800 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-16 sm:py-20 lg:py-28 flex-col md:flex md:flex-row md:items-start md:justify-center"
     >
-      <div className="h-full flex flex-col items-start justify-between bg-blue-300 w-full md:w-[60vw]">
+      <div className="h-full flex flex-col items-start justify-between w-full md:w-[60vw]">
         <div className="">
           <p className="w-full md:w-[70vw] lg:w-[60vw] xl:w-[50vw] text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[50px] text-left mt-4 text-[#1C2042] font-bold font-formular tracking-tighter">
             What We Make,

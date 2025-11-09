@@ -80,9 +80,16 @@ const HeroSection = ({ service }: { service: any }) => (
                 src={service.videoSrc}
                 autoPlay
                 muted
+                playsInline
                 loop
                 controls={false}
                 className="w-full h-full object-cover"
+                onLoadStart={(e) => {
+                  // Ensure video doesn't go fullscreen on iOS
+                  const video = e.currentTarget;
+                  video.setAttribute("playsinline", "true");
+                  video.setAttribute("webkit-playsinline", "true");
+                }}
               />
             ) : (
               <div className="w-full h-full bg-gradient-to-br from-[#FEE79A] to-[#BADBE5] flex items-center justify-center">
@@ -204,7 +211,7 @@ const GallerySection = ({ service }: { service: any }) => {
               >
                 <div
                   className="relative group hover:scale-[1.02] sm:hover:scale-105 transition-all duration-300 cursor-pointer"
-                  onClick={() => !isVideo && openModal(index)}
+                  onClick={() => openModal(index)}
                 >
                   {isVideo ? (
                     <ClientVideo
@@ -212,8 +219,15 @@ const GallerySection = ({ service }: { service: any }) => {
                       autoPlay
                       muted
                       loop
+                      playsInline
                       controls={false}
                       className="w-full rounded-md sm:rounded-lg md:rounded-xl object-cover"
+                      onLoadStart={(e) => {
+                        // Ensure video doesn't go fullscreen on iOS
+                        const video = e.currentTarget;
+                        video.setAttribute("playsinline", "true");
+                        video.setAttribute("webkit-playsinline", "true");
+                      }}
                     />
                   ) : (
                     <Image
@@ -354,21 +368,42 @@ const GallerySection = ({ service }: { service: any }) => {
               </>
             )}
 
-            {/* Image */}
+            {/* Media Content */}
             <div
               className="relative max-w-full max-h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={service.images[selectedImageIndex]}
-                alt={`${service.title} gallery ${selectedImageIndex + 1}`}
-                width={1200}
-                height={800}
-                className="max-w-full max-h-[90vh] object-contain rounded-lg"
-                priority
-              />
+              {(() => {
+                const currentMedia = service.images[selectedImageIndex];
+                const isCurrentVideo = currentMedia.includes(".mp4") || currentMedia.includes(".webm") || currentMedia.includes(".mov");
+                
+                return isCurrentVideo ? (
+                  <ClientVideo
+                    src={currentMedia}
+                    controls
+                    autoPlay
+                    muted
+                    playsInline
+                    className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                    onLoadStart={(e) => {
+                      const video = e.currentTarget;
+                      video.setAttribute("playsinline", "true");
+                      video.setAttribute("webkit-playsinline", "true");
+                    }}
+                  />
+                ) : (
+                  <Image
+                    src={currentMedia}
+                    alt={`${service.title} gallery ${selectedImageIndex + 1}`}
+                    width={1200}
+                    height={800}
+                    className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                    priority
+                  />
+                );
+              })()}
 
-              {/* Image counter */}
+              {/* Media counter */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded-full text-sm">
                 {selectedImageIndex + 1} / {service.images.length}
               </div>

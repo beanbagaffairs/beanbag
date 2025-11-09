@@ -36,18 +36,21 @@ const LocationSection = () => {
         <h1 className="text-xl sm:text-2xl font-thin font-formular leading-none tracking-tighter mb-4">
           Our Location
         </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Kolkata, India</h2>
-        <div className="space-y-1 text-gray-700 text-sm sm:text-base md:text-lg">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">West Bengal, India</h2>
+        <div className="space-y-1 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
           <p className="font-semibold">Bean Bag Affairs</p>
-          <p>123 Tech Boulevard</p>
+          <p>NO 1 RADHIKA CHARAN CHATT</p>
+          <p>Uttarpara, Hooghly, Serampur Uttarpara,</p>
+          <p>West Bengal, India,</p>
+          <p className="font-sans">Pincode: <span className="font-medium">712258</span></p>
         </div>
         <a
-          href="https://maps.google.com?q=123+Tech+Boulevard"
+          href="https://maps.google.com?q=NO+1+RADHIKA+CHARAN+CHATT,+Uttarpara,+Hooghly,+West+Bengal,+India,+712258"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-4 text-blue-600 hover:underline font-medium text-sm sm:text-base md:text-lg"
         >
-          Open Google Maps →
+          Open Google Maps
         </a>
       </motion.div>
     </section>
