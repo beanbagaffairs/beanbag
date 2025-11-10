@@ -38,11 +38,13 @@ const LocationSection = () => {
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">West Bengal, India</h2>
         <div className="space-y-1 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
-          <p className="font-semibold">Bean Bag Affairs</p>
+          <p className="font-semibold">BEANBAGAFFAIRS PRIVATE LIMITED</p>
           <p>NO 1 RADHIKA CHARAN CHATT</p>
           <p>Uttarpara, Hooghly, Serampur Uttarpara,</p>
           <p>West Bengal, India,</p>
           <p className="font-sans">Pincode: <span className="font-medium">712258</span></p>
+          <p className="font-sans">GST: <span className="font-medium">19AANCB9353R1ZK</span></p>
+          <p className="font-sans">CIN: <span className="font-medium">U56210WB2025PTC282795</span></p>
         </div>
         <a
           href="https://maps.google.com?q=NO+1+RADHIKA+CHARAN+CHATT,+Uttarpara,+Hooghly,+West+Bengal,+India,+712258"
