@@ -60,6 +60,12 @@ export default function Works() {
                   muted
                   playsInline
                   className="object-cover w-full h-full cursor-pointer"
+                  onLoadStart={(e) => {
+                    // Ensure video doesn't go fullscreen on iOS
+                    const video = e.currentTarget;
+                    video.setAttribute("playsinline", "true");
+                    video.setAttribute("webkit-playsinline", "true");
+                  }}
                 />
               </InView>
             </a>
@@ -80,6 +86,12 @@ export default function Works() {
                   muted
                   playsInline
                   className="object-cover w-full h-full scale-150"
+                  onLoadStart={(e) => {
+                    // Ensure video doesn't go fullscreen on iOS
+                    const video = e.currentTarget;
+                    video.setAttribute("playsinline", "true");
+                    video.setAttribute("webkit-playsinline", "true");
+                  }}
                 />
               </InView>
             </a>

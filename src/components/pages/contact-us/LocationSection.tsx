@@ -14,15 +14,17 @@ const LocationSection = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <div className="rounded-2xl overflow-hidden shadow-xl shadow-black/30">
-          <Image
-            src="https://res.cloudinary.com/djkd6cyxb/image/upload/v1762932807/Screenshot_from_2025-11-12_13-01-20_zu7bbd.png"
-            alt="Location Map"
-            width={600}
-            height={400}
-            className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover"
-          />
-        </div>
+        <a href="https://maps.app.goo.gl/pjYHBWT9aegPw7AC9" target="_blank">
+          <div className="rounded-2xl overflow-hidden shadow-xl shadow-black/30">
+            <Image
+              src="https://res.cloudinary.com/djkd6cyxb/image/upload/v1762932807/Screenshot_from_2025-11-12_13-01-20_zu7bbd.png"
+              alt="Location Map"
+              width={600}
+              height={400}
+              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover"
+            />
+          </div>
+        </a>
       </motion.div>
 
       {/* Info text */}
@@ -36,12 +38,25 @@ const LocationSection = () => {
         <h1 className="text-xl sm:text-2xl font-thin font-formular leading-none tracking-tighter mb-4">
           Our Location
         </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">West Bengal, India</h2>
-        <div className="space-y-4 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+          Salt Lake, Bidhannagar
+        </h2>
+        <div className="space-y-4 text-gray-700 text-md sm:text-base md:text-lg leading-relaxed">
           <p className="font-semibold">BEANBAGAFFAIRS PRIVATE LIMITED</p>
 
           <div className="space-y-1 text-sm">
-            <p className="font-semibold uppercase tracking-widest text-gray-700">Registered Address</p>
+            <p className="font-semibold uppercase tracking-widest text-gray-700">
+              Corporate Address
+            </p>
+            <p>Godrej Waterside, 12th Floor, Tower II, DP-5</p>
+            <p>DP Block, Sector V, Salt Lake, Bidhannagar</p>
+            <p>West Bengal, India - 700091</p>
+          </div>
+
+          <div className="space-y-1 text-xs">
+            <p className="font-semibold uppercase tracking-widest text-gray-700 text-sm">
+              Registered Address
+            </p>
             <p>UTTARPARA, HOOGHLY, 712258</p>
             <p>NO 1 RADHIKA CHARAN CHATT</p>
             <p>Uttarpara, Hooghly, Serampur Uttarpara</p>
@@ -49,15 +64,12 @@ const LocationSection = () => {
           </div>
 
           <div className="space-y-1 text-sm">
-            <p className="font-semibold uppercase tracking-widest text-gray-700">Corporate Address</p>
-            <p>Godrej Waterside, 12th Floor, Tower II, DP-5</p>
-            <p>DP Block, Sector V, Salt Lake, Bidhannagar</p>
-            <p>West Bengal, India - 700091</p>
-          </div>
-
-          <div className="space-y-1 text-sm">
-            <p className="font-sans">GST: <span className="font-medium">19AANCB9353R1ZK</span></p>
-            <p className="font-sans">CIN: <span className="font-medium">U56210WB2025PTC282795</span></p>
+            <p className="font-sans">
+              GST: <span className="font-medium">19AANCB9353R1ZK</span>
+            </p>
+            <p className="font-sans">
+              CIN: <span className="font-medium">U56210WB2025PTC282795</span>
+            </p>
           </div>
         </div>
         <a
