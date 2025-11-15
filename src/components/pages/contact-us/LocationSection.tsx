@@ -54,7 +54,7 @@ const LocationSection = () => {
           </div>
 
           <div className="space-y-1 text-xs">
-            <p className="font-semibold uppercase tracking-widest text-gray-700 text-sm">
+            <p className="font-semibold uppercase tracking-widest text-gray-700 text-xs">
               Registered Address
             </p>
             <p>UTTARPARA, HOOGHLY, 712258</p>
