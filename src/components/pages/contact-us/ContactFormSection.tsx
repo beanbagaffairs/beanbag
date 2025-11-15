@@ -110,7 +110,8 @@ const ContactFormSection = () => {
               className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl"
             >
               <div className="mb-2 flex items-center gap-4 font-sans">
-                <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> West Bengal, India
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> Salt Lake,
+                Bidhannagar
               </div>
               <div className="mb-2 flex items-center gap-4 font-sans">
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> +91-9674920655
