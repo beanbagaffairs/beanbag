@@ -39,7 +39,7 @@ const LocationSection = () => {
           Our Location
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-          Salt Lake, Bidhannagar
+          Salt Lake, Sector V
         </h2>
         <div className="space-y-4 text-gray-700 text-md sm:text-base md:text-lg leading-relaxed">
           <p className="font-semibold">BEANBAGAFFAIRS PRIVATE LIMITED</p>

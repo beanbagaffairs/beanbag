@@ -111,7 +111,7 @@ const ContactFormSection = () => {
             >
               <div className="mb-2 flex items-center gap-4 font-sans">
                 <MapPin className="w-5 h-5 sm:w-6 sm:h-6" /> Salt Lake,
-                Bidhannagar, West Bengal, India
+                Sector V, West Bengal, India
               </div>
               <div className="mb-2 flex items-center gap-4 font-sans">
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" /> +91-9674920655
