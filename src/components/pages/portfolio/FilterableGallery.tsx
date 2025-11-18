@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import ClientVideo from "@/components/ui/ClientVideo";
@@ -153,24 +153,7 @@ export default function FilterableMasonryGallery() {
   const filtered = items.filter(
     (it) => filter === "all" || it.category === filter
   );
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isModalOpen) return;
-
-      if (e.key === "Escape") {
-        setIsModalOpen(false);
-      } else if (e.key === "ArrowLeft") {
-        navigateMedia("prev");
-      } else if (e.key === "ArrowRight") {
-        navigateMedia("next");
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isModalOpen, selectedMediaIndex, filtered.length]);
+  const filteredLength = filtered.length;
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -195,16 +178,45 @@ export default function FilterableMasonryGallery() {
     setIsModalOpen(false);
   };
 
-  const navigateMedia = (direction: "prev" | "next") => {
-    if (direction === "prev") {
-      setSelectedMediaIndex((prev) =>
-        prev === 0 ? filtered.length - 1 : prev - 1
-      );
-    } else {
-      setSelectedMediaIndex((prev) =>
-        prev === filtered.length - 1 ? 0 : prev + 1
-      );
-    }
+  const navigateMedia = useCallback(
+    (direction: "prev" | "next") => {
+      if (direction === "prev") {
+        setSelectedMediaIndex((prev) =>
+          prev === 0 ? filteredLength - 1 : prev - 1
+        );
+      } else {
+        setSelectedMediaIndex((prev) =>
+          prev === filteredLength - 1 ? 0 : prev + 1
+        );
+      }
+    },
+    [filteredLength]
+  );
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isModalOpen) return;
+
+      if (e.key === "Escape") {
+        setIsModalOpen(false);
+      } else if (e.key === "ArrowLeft") {
+        navigateMedia("prev");
+      } else if (e.key === "ArrowRight") {
+        navigateMedia("next");
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isModalOpen, navigateMedia]);
+
+  const ensureInlinePlayback = (
+    event: React.SyntheticEvent<HTMLVideoElement>
+  ) => {
+    const video = event.currentTarget;
+    video.setAttribute("playsinline", "true");
+    video.setAttribute("webkit-playsinline", "true");
   };
 
   const selectedMedia = filtered[selectedMediaIndex];
@@ -288,7 +300,9 @@ export default function FilterableMasonryGallery() {
                   muted
                   loop
                   controls={false}
+                  playsInline
                   className="w-full rounded-md sm:rounded-lg md:rounded-xl object-cover"
+                  onLoadStart={ensureInlinePlayback}
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-md sm:rounded-lg md:rounded-xl flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white bg-opacity-90 rounded-full p-2">
@@ -375,7 +389,9 @@ export default function FilterableMasonryGallery() {
                   src={selectedMedia.src}
                   controls
                   autoPlay
+                  playsInline
                   className="max-w-full max-h-full object-contain rounded-lg"
+                  onLoadStart={ensureInlinePlayback}
                 />
               )}
             </div>
