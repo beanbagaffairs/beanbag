@@ -149,9 +149,25 @@ export function Footer() {
             <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
           </div>
         </div>
-        <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase font-formular">
-          <span className="text-sm sm:text-base">
-            2025 <span className="text-white font-serif">©</span> BeanBagAffairs
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase font-formular sm:items-center">
+          <div className="flex items-end gap-1.5">
+            <span className="text-sm sm:text-base leading-none pb-[1px] sm:pb-[2px]">
+              Made by
+            </span>
+            <div className="relative overflow-hidden group/line cursor-pointer">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://ramesys.co.uk"
+                className="leading-none pb-[1px] sm:pb-[2px] font-formular text-sm sm:text-base"
+              >
+                Ramesys
+              </a>
+              <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
+            </div>
+          </div>
+          <span className="text-sm sm:text-base leading-none pb-[1px] sm:pb-[2px]">
+            2026 <span className="text-white font-serif">©</span> BeanBagAffairs
           </span>
         </div>
       </div>
