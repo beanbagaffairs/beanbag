@@ -78,9 +78,9 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="flex relative flex-col min-h-[70vh] lg:min-h-screen w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-8 sm:py-12 md:py-16 lg:py-20 justify-evenly bg-[#1C2042] text-white">
+    <footer className="flex relative flex-col min-h-[70vh] lg:min-h-screen w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-8 sm:py-12 md:py-16 lg:pt-20 justify-evenly bg-[#1C2042] text-white">
       <div className="flex flex-col">
-        <ul className="flex flex-col gap-3 sm:gap-4 md:gap-5 uppercase w-full sm:w-48 md:w-52 lg:w-60">
+        <ul className="flex flex-row flex-wrap justify-center sm:justify-start sm:flex-col gap-3 sm:gap-4 md:gap-5 uppercase w-full sm:w-48 md:w-52 lg:w-60">
           {[
             { text: "About", href: "/about-us" },
             { text: "Services", href: "/service" },
@@ -94,7 +94,7 @@ export function Footer() {
               ref={(el) => {
                 listItemsRef.current[index] = el;
               }}
-              className="relative overflow-hidden h-4 sm:h-5 md:h-6 cursor-pointer"
+              className="relative overflow-hidden h-4 sm:h-5 md:h-6 cursor-pointer w-[45%] sm:w-auto"
             >
               <Link href={item.href}>
                 <span className="block initial absolute top-0 left-0 w-full h-full font-formular text-sm sm:text-base md:text-lg">
@@ -116,7 +116,7 @@ export function Footer() {
           <span className="block w-full bg-white h-2 sm:h-3 -translate-x-full group-hover/line:translate-x-0 duration-500 opacity-0 group-hover/line:opacity-100" />
         </div>
       </Link>
-      <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 justify-between">
+      <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 items-center justify-between">
         <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase">
           <div className="relative overflow-hidden group/line cursor-pointer">
             <a
@@ -150,26 +150,23 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase font-formular sm:items-center">
-          <div className="flex items-end gap-1.5">
-            <span className="text-sm sm:text-base leading-none pb-[1px] sm:pb-[2px]">
-              Made by
-            </span>
-            <div className="relative overflow-hidden group/line cursor-pointer">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://ramesys.co.uk"
-                className="leading-none pb-[1px] sm:pb-[2px] font-formular text-sm sm:text-base"
-              >
-                Ramesys
-              </a>
-              <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
-            </div>
-          </div>
           <span className="text-sm sm:text-base leading-none pb-[1px] sm:pb-[2px]">
             2026 <span className="text-white font-serif">©</span> BeanBagAffairs
           </span>
         </div>
+      </div>
+      <div className="w-full text-center pt-4">
+        <span className="text-xs text-white/50 font-formular uppercase tracking-widest">
+          Developed and managed by{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://ramesys.co.uk"
+            className="hover:text-white transition-colors duration-300 text-white/80"
+          >
+            Ramesys
+          </a>
+        </span>
       </div>
     </footer>
   );
