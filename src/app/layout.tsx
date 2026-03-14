@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import "./fonts.css";
 import ClientLayout from "./ClientLayout";
@@ -26,6 +27,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-N6EF3ZHTY1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N6EF3ZHTY1');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} overflow-x-hidden relative`}>
         <ClientLayout>{children}</ClientLayout>
         <WhatsAppIcon />
