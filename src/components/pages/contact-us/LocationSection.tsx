@@ -50,7 +50,7 @@ const LocationSection = () => {
             </p>
             <p>Godrej Waterside, 12th Floor, Tower II, DP-5</p>
             <p>DP Block, Sector V, Salt Lake, Bidhannagar</p>
-            <p>West Bengal, India - 700091</p>
+            <p>West Bengal, India , 700091</p>
           </div>
 
           <div className="space-y-1 text-xs">
