@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import "./fonts.css";
 import ClientLayout from "./ClientLayout";
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body className={`${inter.className} overflow-x-hidden relative`}>
         <ClientLayout>{children}</ClientLayout>
         <WhatsAppIcon />
+        <Analytics />
       </body>
     </html>
   );
