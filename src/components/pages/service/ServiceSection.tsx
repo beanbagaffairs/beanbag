@@ -55,7 +55,7 @@ const weddingServices = [
       "Professional make-up artists, Bride and groom styling, Guest grooming services",
     href: "/service/make-up-styling-grooming",
     imageSrc:
-      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758311330/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/weddings%20and%20events/Makeup%20and%20styling/makeup_pcyrgg.jpg",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1787551881/1_y1tnah.jpg",
     category: "weddings",
   },
   {
@@ -65,7 +65,7 @@ const weddingServices = [
       "Artist bookings (DJs, classical musicians, folk performers), Stage and sound setup, Celebrity performance coordination",
     href: "/service/entertainment-musical-events",
     imageSrc:
-      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1761548444/Thumbnail_sjfcaj.jpg",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1787551876/E_sr0u1g.jpg",
     category: "weddings",
   },
   {
@@ -75,7 +75,7 @@ const weddingServices = [
       "Indoor and outdoor options, Luxury resorts, banquet halls, palaces, Legal permissions and logistics",
     href: "/service/venue-selection-setup",
     imageSrc:
-      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758313866/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/weddings%20and%20events/Venue%20Selection%20and%20setup/Thumbnail_ywfm5b.jpg",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1787551879/3_sd7mqt.jpg",
     category: "weddings",
   },
   // {
@@ -105,7 +105,7 @@ const weddingServices = [
       "Personal concierge and assistants, Guest security and privacy management, Wedding websites, gift registries, international guest handling",
     href: "/service/custom-vip-services",
     imageSrc:
-      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758313886/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/weddings%20and%20events/Vip%20services/thumbnail_ugg2fb.jpg",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1787551882/4_tdatce.png",
     category: "weddings",
   },
 ];
@@ -128,7 +128,7 @@ const adFilmServices = [
       "Brand storytelling, Scriptwriting and storyboarding, Creative consulting",
     href: "/service/concept-script-development",
     imageSrc:
-      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758313911/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/Ad%20films%20amd%20commercials/vlcsnap-2025-09-10-14h13m10s419_axlrqy.png",
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1787552888/5_hdch97.jpg",
     category: "adFilms",
   },
   {
@@ -137,8 +137,8 @@ const adFilmServices = [
     description:
       "Filming logistics, crew, and technical setup, Locations, props, set design, Costume and styling",
     href: "/service/production-services",
-    imageSrc:
-      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758311487/Bean%20Bag%20Agencies/main/Stock%20Shots%20by%20Chiranjit/InShot_20240306_101704925_dqpvn7.jpg",
+    videoSrc:
+      "https://res.cloudinary.com/djkd6cyxb/video/upload/v1787553878/2_compress_dadz1s.mp4",
     category: "adFilms",
   },
   {
@@ -190,18 +190,20 @@ const ServiceSection = () => {
   const services = [...weddingServices, ...adFilmServices];
 
   // Function to map service ID to category
-  const getCategoryFromId = (id: string | null): "all" | "weddings" | "adFilms" | null => {
+  const getCategoryFromId = (
+    id: string | null,
+  ): "all" | "weddings" | "adFilms" | null => {
     if (!id) return null; // No ID provided
 
     const numericId = parseInt(id, 10);
     if (isNaN(numericId)) return null; // ID is not a number
 
     // Check wedding services
-    if (weddingServices.some(service => service.id === numericId)) {
+    if (weddingServices.some((service) => service.id === numericId)) {
       return "weddings";
     }
     // Check ad film services
-    if (adFilmServices.some(service => service.id === numericId)) {
+    if (adFilmServices.some((service) => service.id === numericId)) {
       return "adFilms";
     }
 
@@ -220,22 +222,24 @@ const ServiceSection = () => {
   // Category background images
   const categoryImages = {
     all: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433817/full_wed_plan-2_lzzp8l.jpg",
-    weddings: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433806/Thumbnail_j4t5zn.jpg",
-    adFilms: "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433826/vlcsnap-2025-09-10-14h11m26s354_n0eshy.png"
+    weddings:
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433806/Thumbnail_j4t5zn.jpg",
+    adFilms:
+      "https://res.cloudinary.com/djkd6cyxb/image/upload/v1760433826/vlcsnap-2025-09-10-14h11m26s354_n0eshy.png",
   };
 
   // Category titles
   const categoryTitles = {
     all: "Weddings and Ad Films",
     weddings: "Weddings and Events",
-    adFilms: "Ad Films and Commercials"
+    adFilms: "Ad Films and Commercials",
   };
 
   // Category alt texts
   const categoryAltTexts = {
     all: "Bean Bag Affairs services overview",
     weddings: "Weddings and Events",
-    adFilms: "Ad Films and Commercials"
+    adFilms: "Ad Films and Commercials",
   };
 
   const containerVariants: Variants = {
@@ -253,7 +257,9 @@ const ServiceSection = () => {
   const localStorageKey = "serviceFilter";
 
   // Initialize filter state to null. It will be set in useEffect after hydration.
-  const [filter, setFilter] = useState<"all" | "weddings" | "adFilms" | null>(null);
+  const [filter, setFilter] = useState<"all" | "weddings" | "adFilms" | null>(
+    null,
+  );
 
   useEffect(() => {
     let initialFilter: "all" | "weddings" | "adFilms" | null = null;
@@ -266,13 +272,13 @@ const ServiceSection = () => {
       // Fallback to localStorage if no ID in URL
       const storedData = localStorage.getItem(localStorageKey);
       let storedFilter: "all" | "weddings" | "adFilms" | null = null;
-      
+
       if (storedData) {
         try {
           const { filter, timestamp } = JSON.parse(storedData);
           const now = Date.now();
           const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
-          
+
           // Check if the stored data is still valid (less than 1 hour old)
           if (now - timestamp < oneHour) {
             storedFilter = filter;
@@ -285,7 +291,7 @@ const ServiceSection = () => {
           localStorage.removeItem(localStorageKey);
         }
       }
-      
+
       initialFilter = storedFilter || "all"; // Default to 'all' if nothing else is found
     } else {
       // Default for SSR or environments without window
@@ -296,17 +302,18 @@ const ServiceSection = () => {
 
   // Update localStorage when filter changes with expiration timestamp
   useEffect(() => {
-    if (typeof window !== "undefined" && filter) { // Ensure filter is not null before setting
+    if (typeof window !== "undefined" && filter) {
+      // Ensure filter is not null before setting
       const dataToStore = {
         filter: filter,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       };
       localStorage.setItem(localStorageKey, JSON.stringify(dataToStore));
     }
   }, [filter]);
 
   const filtered = services.filter(
-    (service) => filter === "all" || service.category === filter
+    (service) => filter === "all" || service.category === filter,
   );
 
   return (
@@ -326,8 +333,8 @@ const ServiceSection = () => {
             {cat === "all"
               ? "All Services"
               : cat === "weddings"
-              ? "Weddings and Events"
-              : "Ad Films and Commercials"}
+                ? "Weddings and Events"
+                : "Ad Films and Commercials"}
           </button>
         ))}
       </div>
@@ -366,7 +373,11 @@ const ServiceSection = () => {
                 {categoryTitles[filter as keyof typeof categoryTitles]}
               </h2>
               <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/90 md:leading-relaxed max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto px-2 sm:px-4">
-                {categoryDescriptions[filter as keyof typeof categoryDescriptions]}
+                {
+                  categoryDescriptions[
+                    filter as keyof typeof categoryDescriptions
+                  ]
+                }
               </p>
             </motion.div>
           </div>

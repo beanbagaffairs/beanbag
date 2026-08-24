@@ -148,6 +148,26 @@ export function Footer() {
             </a>
             <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
           </div>
+          <div className="relative overflow-hidden group/line cursor-pointer">
+            <a
+              target="_blank"
+              href="https://youtube.com/@beanbagaffairs?si=VkDGwyFrO48dRwFD"
+              className="leading-none pb-2 font-formular text-sm sm:text-base"
+            >
+              youtube
+            </a>
+            <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
+          </div>
+          <div className="relative overflow-hidden group/line cursor-pointer">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/profile.php?id=61591576192572"
+              className="leading-none pb-2 font-formular text-sm sm:text-base"
+            >
+              facebook
+            </a>
+            <span className="block bg-white h-[1px] sm:h-[2px] -translate-x-full group-hover/line:translate-x-0 group-hover/line:opacity-100 opacity-0 duration-500" />
+          </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 uppercase font-formular sm:items-center">
           <span className="text-sm sm:text-base leading-none pb-[1px] sm:pb-[2px]">
