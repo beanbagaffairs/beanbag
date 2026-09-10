@@ -117,8 +117,10 @@ const adFilmServices = [
     description:
       "Great celebrations are also great stages for brands. At Bean Bag Affairs, we curate collaborations between events and brands that feel natural, authentic, and mutually rewarding.",
     href: "/service/brand-collaborations",
+    // imageSrc:
+    //   "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758311337/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/weddings%20and%20events/Brand%20Collaborations/brand_collab_6_vzhfdz.jpg",
     imageSrc:
-      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758311337/Bean%20Bag%20Agencies/main/website%20content/bean%20bag%20website/services/weddings%20and%20events/Brand%20Collaborations/brand_collab_6_vzhfdz.jpg",
+      "https://res.cloudinary.com/dvjqrh2gh/image/upload/v1758311489/Bean%20Bag%20Agencies/main/Stock%20Shots%20by%20Chiranjit/InShot_20250909_235207431_xukjqd.jpg",
     category: "adFilms",
   },
   {
