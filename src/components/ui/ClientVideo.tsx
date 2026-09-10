@@ -10,5 +10,5 @@ export default function ClientVideo(
 
   if (!isClient) return null; // prevent SSR mismatch
 
-  return <video {...props} />;
+  return <video playsInline {...props} />;
 }
